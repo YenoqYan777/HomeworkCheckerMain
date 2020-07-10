@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/bookListFragment">
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.homeworkchecker.arch.booklist.BookListFragment"
+        android:label="fragment_book_list"
+        tools:layout="@layout/fragment_book_list" >
+        <action
+            android:id="@+id/action_bookListFragment_to_chapterListFragment"
+            app:destination="@id/chapterListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chapterListFragment"
+        android:name="com.homeworkchecker.arch.chapterList.ChapterListFragment"
+        android:label="fragment_chapter_list"
+        tools:layout="@layout/fragment_chapter_list" />
+</navigation>
